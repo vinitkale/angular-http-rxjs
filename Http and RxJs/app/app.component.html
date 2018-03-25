@@ -1,0 +1,29 @@
+<div class="container card-header">
+    <h1 class=" text-center display-3 ">
+        Posts
+    </h1>
+    <p class="lead text-center">
+        We are fetching data from jsonplaceholder. It is dummy data
+    </p>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="card bg-light mb-3" *ngFor="let post of posts;let i = index">
+        <div class="card-header">#{{i}}</div>
+        <div class="card-body">
+            <h4 class="card-title">{{post.title}}</h4>
+            <p class="card-text">{{post.body}}</p>
+        </div>
+        <div class="card-footer">
+            <blockquote class="blockquote">
+                <footer class="blockquote-footer">
+                        posted by {{post.userId}}
+                </footer>
+            </blockquote>
+            <div class="text-right" *ngIf=>
+            </div>  
+        </div>
+    </div>
+</div>
